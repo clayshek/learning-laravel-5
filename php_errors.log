@@ -1,0 +1,4 @@
+[03-Feb-2017 20:20:11 UTC] PHP Fatal error:  Label 'Route' already defined in C:\Users\clay.shekleton\learning-laravel-5\routes\web.php on line 31
+[06-Feb-2017 20:37:43 UTC] PHP Fatal error:  Class 'App\Model' not found in C:\Users\clay.shekleton\learning-laravel-5\app\Comment.php on line 5
+[06-Feb-2017 20:38:59 UTC] PHP Fatal error:  Class 'App\Model' not found in C:\Users\clay.shekleton\learning-laravel-5\app\Comment.php on line 5
+[06-Feb-2017 20:39:31 UTC] PHP Fatal error:  Class 'App\Model' not found in C:\Users\clay.shekleton\learning-laravel-5\app\Comment.php on line 5
