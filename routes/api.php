@@ -16,3 +16,15 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+/*
+Route::group(['prefix' => 'api', 'namespace' => 'Api'], function () {
+    Route::resource('widgets', 'WidgetsController');
+});
+*/
+
+Route::get('/widgets', 'Api\WidgetsController@index');
+Route::get('/widgets/{id}', 'Api\WidgetsController@show');
+Route::post('/widgets', 'Api\WidgetsController@store');
+Route::delete('/widgets/{id}', 'Api\WidgetsController@destroy');
+Route::patch('/widgets/{id}', 'Api\WidgetsController@update');
