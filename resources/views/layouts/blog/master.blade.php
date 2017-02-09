@@ -15,12 +15,28 @@
 
     <!-- Custom styles for this template -->
     <link href="\css\blog.css" rel="stylesheet">
+
+    <!-- This isn't working right now -->
+    <script>
+      window.setTimeout(function() {
+      $("#flash-message").fadeTo(500, 0).slideUp(500, function(){
+      $(this).remove();
+      });
+      }, 3000);
+    </script>
+
   </head>
 
   <body>
 
     @include ('layouts.blog.nav')
    
+   @if ($flash = session('message'))
+
+    <div id ="flash-message" class="alert alert-success" role="alert">
+       {{ $flash }}
+      </div>
+    @endif
 
     <div class="blog-header">
       <div class="container">

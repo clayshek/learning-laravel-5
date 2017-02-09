@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Mail\BlogPosted;
+use App\Mail\BlogPosted2;
 
 // Carbon used for date conversions below
 use Carbon\Carbon;
@@ -18,6 +18,7 @@ class BlogController extends Controller
 
     public function index()
     {
+
         $posts = \App\Post::latest();
 
         if ($month = request('month')) {
@@ -93,10 +94,15 @@ class BlogController extends Controller
         //$post->save();
 
 
-        // Send email upon blog post. Up top, use App\Mail\BlogPosted, which is created by 
-        // php artisan make:mail BlogPosted
+        // Send email upon blog post. Up top, use App\Mail\BlogPosted (or BlogPosted2), 
+        // which is created by php artisan make:mail BlogPosted
 
-        \Mail::to(auth()->user()->email)->send(new BlogPosted(auth()->user()));
+        \Mail::to(auth()->user()->email)->send(new BlogPosted2(auth()->user()));
+
+        // Flash messaging & session handling, this sets a flash message, good for one page load, 
+        // which will be used on the subsequent page (redirect), see layouts\blog\master.blade.php where used
+
+        session()->flash('message', 'Thanks for the blog post!');
 
         //And then redirect to the home page
 
