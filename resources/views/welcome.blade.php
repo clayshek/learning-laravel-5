@@ -92,6 +92,7 @@
                     <a href="http://localhost:8000/blog">Blog</a>
                     <a href="http://localhost:8000/about">About</a>
                     <a href="http://localhost:8000/tasks">Tasks</a>
+                    <a href="http://localhost:8000/widgets">Widgets</a>
                 </div>
             </div>
         </div>

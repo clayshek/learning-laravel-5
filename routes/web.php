@@ -27,6 +27,8 @@ Route::get('/blog/create', 'BlogController@create');
 Route::get('/blog/{post}', 'BlogController@show');
 Route::post('/blog/{post}/comments', 'CommentsController@store');
 
+Route::get('/widgets', 'WidgetsController@index');
+
 Route::get('/posts', 'PostsController@index');
 Route::get('/posts/{post}', 'PostsController@show');
 

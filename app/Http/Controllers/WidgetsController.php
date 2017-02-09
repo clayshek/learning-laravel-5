@@ -14,7 +14,14 @@ class WidgetsController extends Controller
      */
     public function index()
     {
-        //
+       $widgets = \App\Widgets::latest();
+
+       $widgets = $widgets->orderBy('id', 'asc')->get();
+       //Widgets::orderBy('id')->get()
+
+       return view('widgets.index', compact('widgets'));
+
+       //return \App\Widgets::all();
     }
 
     /**
