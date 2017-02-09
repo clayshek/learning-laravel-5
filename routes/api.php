@@ -23,7 +23,7 @@ Route::group(['prefix' => 'api', 'namespace' => 'Api'], function () {
 });
 */
 
-Route::get('/widgets', 'Api\WidgetsController@index');
+Route::get('/widgets', 'Api\WidgetsController@index'); //->middleware('auth:api');
 Route::get('/widgets/{id}', 'Api\WidgetsController@show');
 Route::post('/widgets', 'Api\WidgetsController@store');
 Route::delete('/widgets/{id}', 'Api\WidgetsController@destroy');
